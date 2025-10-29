@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://e5ycpsjrg0jl"]
+
+[ext_resource type="Theme" uid="uid://drays61pfu7xc" path="res://lessons/main_theme.tres" id="1_so8k2"]
+[ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="2_fiaju"]
+[ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="3_kf0aw"]
+[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="4_5dine"]
+[ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="5_bxmx2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6a6wx"]
+shader = ExtResource("2_fiaju")
+shader_parameter/pattern_sampler = ExtResource("3_kf0aw")
+shader_parameter/bg_color = Color(1, 0, 0, 1)
+shader_parameter/pattern_color = Color(0, 0, 0, 1)
+shader_parameter/pattern_size = 256.0
+
+[node name="dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_so8k2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6a6wx")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.679
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 236.0
+offset_right = 0.3199463
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5dine")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_bxmx2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.517
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.6400146
+offset_top = 213.0
+offset_right = -232.0
+offset_bottom = -736.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "follow pandanut69
+"
+fit_content = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -66.0
+offset_right = -1.0
+offset_bottom = 2.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "next"
