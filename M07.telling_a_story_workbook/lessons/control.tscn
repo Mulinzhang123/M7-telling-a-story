@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://e5ycpsjrg0jl"]
+[gd_scene load_steps=9 format=3 uid="uid://e5ycpsjrg0jl"]
 
 [ext_resource type="Theme" uid="uid://drays61pfu7xc" path="res://lessons/main_theme.tres" id="1_so8k2"]
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="2_fiaju"]
+[ext_resource type="Script" uid="uid://dhsjgposivl1e" path="res://lessons/dialogue.gd" id="2_kf0aw"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="3_kf0aw"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="4_5dine"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="5_bxmx2"]
+[ext_resource type="AudioStream" uid="uid://bafjgt7eu3x5a" path="res://assets/talking_synth.ogg" id="7_kf0aw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6a6wx"]
 shader = ExtResource("2_fiaju")
@@ -21,6 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_so8k2")
+script = ExtResource("2_kf0aw")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_6a6wx")
@@ -58,6 +61,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.517
@@ -74,6 +78,7 @@ text = "follow pandanut69
 fit_content = true
 
 [node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -87,3 +92,7 @@ offset_bottom = 2.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "next"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_kf0aw")
