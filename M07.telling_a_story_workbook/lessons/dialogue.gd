@@ -15,12 +15,12 @@ var bodies := {
 var dialogue_items: Array[Dictionary] = [
 	{
 		"expression": expressions["regular"],
-		"text": "I've been studying arrays and dictionaries lately.",
+		"text": "[i]how you doing shawty.[/i]",
 		"character": bodies["sophia"],
 	},
 	{
 		"expression": expressions["regular"],
-		"text": "Oh, nice. How has it been going?",
+		"text": "im doing great baddie",
 		"character": bodies["pink"],
 	},
 	{
